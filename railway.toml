@@ -1,5 +1,5 @@
 [deploy]
-startCommand = "n8n start"
+startCommand = "sh -c 'if [ \"$WORKER\" = \"1\" ]; then node -e \"require(\\\"http\\\").createServer((_,res)=>{res.end(\\\"ok\\\")}).listen(process.env.PORT||3000)\" & n8n worker --concurrency=${WORKER_CONCURRENCY:-10}; else n8n start; fi'"
 healthcheckPath = "/healthz"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
