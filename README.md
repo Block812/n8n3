@@ -1,21 +1,24 @@
-# n8n template
+# 🧠 Block812/n8n3 — Custom n8n for Railway with FFmpeg
 
-This template deploys a self-hosted version of [n8n](https://n8n.io/). Internally it uses a PostgreSQL database to store the data.
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/EfkjX2?referralCode=lJoDnn)
+This is a customized version of [n8n](https://n8n.io) prepared for **self-hosted deployment on Railway**.
 
 ## ✨ Features
+- Based on the latest official n8n Docker image
+- Auto-installs **FFmpeg** for audio processing (conversion, silence removal, compression)
+- Compatible with PostgreSQL and Redis setups on Railway
+- Works with `n8n worker` and `main instance` mode
 
-- n8n
-- PostgreSQL
+## 🚀 Deploy on Railway
+1. Fork this repo
+2. Connect it to your Railway project
+3. Deploy — FFmpeg is automatically included!
 
-## 💁‍♀️ How to use
+## 🧩 Example use case
+Use it to:
+- Clean Telegram audio files before transcription
+- Convert `.oga` to `.wav` or `.mp3`
+- Preprocess voice messages for Deepgram or Whisper API
 
-- Click the Railway button 👆
-- Add the required environment variables
-- Deploy
+---
 
-## 📝 Notes
-
-- Source image: https://hub.docker.com/r/n8nio/n8n
-- Docs: https://docs.n8n.io/
+Made by [Block812](https://github.com/Block812)
